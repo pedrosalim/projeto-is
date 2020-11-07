@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/show.css">
+</head>
+<body>
+
+    
+
+    <div id="page-landing">
+
+                <span class="back" >
+                    <a href="/home" title="Voltar">
+                        <img src="/images/arrow-back.svg" alt="Voltar">
+                    </a>
+                </span>
+        
+        
+        <div id="container">
+
+            
+            
+
+            <header>
+
+
+                <h1>Aula {{ video.videoname }}</h1>
+            </header>
+
+            {# <a href="{{ video.linkvideo }}"></a><div 
+                class="item avatar" 
+                style="background: url({{ video.foto_url }}) no-repeat center center / cover">
+            </div> #}
+
+            <div class="item">
+                <a href="{{ video.linkvideo }}" target="_blank">
+                    <img src="{{ video.foto_url }}" alt="Foto Vídeo">
+                </a>
+            </div>
+
+            <div class="item">
+                <div class="main">Professor</div>
+                <div>{{ video.name }}</div>
+            </div>
+
+            
+            
+
+            {# <div class="item">
+                <div>Foto</div>
+                <div>{{ video.foto_url }}</div>
+            </div> #}
+
+            <div class="item">
+                <div class="main">Matéria</div>
+                <div>{{ video.theme }}</div>
+            </div>
+
+            <div class="item">
+                <div class="main">Universidade</div>
+                <div>{{ video.university }}</div>
+            </div>
+
+            <div class="item">
+                <div class="main">Descrição</div>
+                <div>{{ video.description }}</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

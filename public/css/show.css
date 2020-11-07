@@ -1,0 +1,52 @@
+#page-landing h1 {
+    color: rgb(97, 97, 223);
+    font-weight: bold;
+    font-size: 5.4rem;
+    line-height: 6.5rem;
+    padding: 2.4rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item {
+    color: black;
+    /* display: flex; */
+    flex-direction: column;
+    padding: 1.2rem;
+    line-height: 3.2rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.item .main {
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.item img {
+    border-radius: 30px;
+    width: 600px;
+    height: 350px;
+    margin: 20px 0px 0px 30px;
+    align-items: center;
+}
+
+.back a {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    padding: 1.2rem;
+}
+
+.back a:hover {
+    background: lightcoral;
+    box-shadow: 2px 2px 2px 2px lightslategray;
+    transition: 400ms;
+}

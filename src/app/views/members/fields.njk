@@ -1,0 +1,86 @@
+<div class="item">
+    <div>Link do vídeo</div>
+    <div>
+        <input 
+            type="text"
+            name="linkvideo"
+            placeholder="https://"
+            value="{{ video.linkvideo }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Foto do vídeo</div>
+    <div>
+        <input 
+            type="text"
+            name="foto_url"
+            placeholder="https://"
+            value="{{ video.foto_url }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome do Professor</div>
+    <div>
+        <input 
+            type="text" 
+            name="name" 
+            placeholder="Ex: Maria" 
+            value="{{ video.name }}" 
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Matéria</div>
+    <div>
+        <input 
+            type="text"
+            name="theme"
+            placeholder="Ex: Teoria da Computação"
+            value="{{ video.theme }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome do vídeo</div>
+    <div>
+        <input 
+            type="text"
+            name="videoname"
+            placeholder="Ex: Máquinas de Turing"
+            value="{{ video.videoname }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Descrição</div>
+    <div>
+        <input 
+            type="text"
+            name="description"
+            placeholder="Descrição do video"
+            value="{{ video.description }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Faculdade</div>
+    <div>
+        <input 
+            type="text"
+            name="university"
+            placeholder="Ex: UFVJM"
+            value="{{ video.university }}"
+            maxlength="10"
+        >
+    </div>
+</div>
+
+<button id="save" type="submit">Salvar</button>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Vídeo Aula</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+   
+    <div id="page-landing">
+        <div id="container">
+            
+            <form method="POST" action="/home">
+                <section class="details">
+                    <h2 class="h2create">Novo vídeo</h2>
+
+                    {% include 'members/fields.njk' %}
+
+                </section>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>
