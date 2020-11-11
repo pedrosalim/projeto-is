@@ -11,7 +11,7 @@ module.exports = {
             })
         } else {
             Video.all(function(videos) {
-                return res.render("members/home", { videos })
+                return res.render("members/home")
             })
         }
 
@@ -41,6 +41,28 @@ module.exports = {
             if(!video) return res.send("Vídeo não existe!")
 
             return res.render("members/show", { video })
+        })
+    },
+    edit(req, res) {
+        Video.find(req.params.id, function(video) {
+            if(!video) return res.send("Vídeo não existe!")
+
+            return res.render("members/edit", { video })
+        })
+    },
+    put(req, res) {
+        const keys = Object.keys(req.body)
+
+        for(key of keys) {
+            if(req.body[key] == "") {
+                return res.send("Preencha todos os campos")
+
+            }
+        }
+
+    
+        Video.update(req.body, function() {
+            return res.redirect(`/video/${req.body.id}`)
         })
     }
 }

@@ -14,8 +14,8 @@ module.exports = {
     create(data, callback) {
         const query = `
             INSERT INTO videos (
-                name,
                 foto_url,
+                name,
                 theme,
                 videoname,
                 description,
@@ -26,8 +26,8 @@ module.exports = {
         `
 
         const values = [
-            data.name,
             data.foto_url,
+            data.name,
             data.theme,
             data.videoname,
             data.description,
@@ -60,5 +60,35 @@ module.exports = {
 
             callback(results.rows)
         })
-    }
+    },
+    update(data, callback) {
+        const query = `
+            UPDATE videos SET 
+                foto_url=($1),
+                name=($2),
+                theme=($3),
+                videoname=($4),
+                description=($5),
+                university=($6),
+                linkvideo=($7)
+            WHERE id = $8    
+        `
+
+        const values = [
+            data.foto_url,
+            data.name,
+            data.theme,
+            data.videoname,
+            data.description,
+            data.university,
+            data.linkvideo,
+            data.id
+        ]
+
+        db.query(query, values, function(err, results) {
+            if(err) throw "Database Error"
+
+            callback()
+        })
+    },
 }
