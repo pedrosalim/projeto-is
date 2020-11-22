@@ -13,7 +13,7 @@ server.use(methodOverride('_method'))
 // path.resolve(__dirname,'views')
 server.use(routes)
 
-server.set("view engine", "njk")
+server.set("view engine", "html")
 
 nunjucks.configure(__dirname + "/app/views", {
     express: server,
