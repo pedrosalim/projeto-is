@@ -2,7 +2,7 @@ const Video = require("../models/Video")
 
 module.exports = {
     index(req, res) {
-
+console.log(__dirname)
         const { filter } = req.query
 
         if(filter) {
