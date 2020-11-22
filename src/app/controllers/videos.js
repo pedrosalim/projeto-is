@@ -7,11 +7,11 @@ module.exports = {
 
         if(filter) {
             Video.findBy(filter, function(videos) {
-                return res.render(__dirname + "members/home", { videos, filter })
+                return res.render("members/home", { videos, filter })
             })
         } else {
             Video.all(function() {
-                return res.render(__dirname + "members/home")
+                return res.render("members/home")
             })
         }
 
@@ -40,7 +40,7 @@ module.exports = {
         Video.find(req.params.id, function(video) {
             if(!video) return res.send("Vídeo não existe!")
 
-            return res.render(__dirname + "members/show", { video })
+            return res.render("members/show", { video })
         })
     },
     edit(req, res) {
