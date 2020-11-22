@@ -7,13 +7,13 @@ const methodOverride = require('method-override')
 const server = express()
 
 server.use(express.urlencoded({ extended: true }))
-server.use(express.static(__dirname + 'public'))
+server.use(express.static('public'))
 server.use(methodOverride('_method'))
 // server.set('views', path.join(__dirname, "views"))
 // path.resolve(__dirname,'views')
 server.use(routes)
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 
 nunjucks.configure(__dirname + "/app/views", {
     express: server,
