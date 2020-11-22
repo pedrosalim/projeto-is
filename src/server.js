@@ -14,11 +14,13 @@ server.use(routes)
 
 server.set("view engine", "njk")
 
-nunjucks.configure("src/app/views", {
+nunjucks.configure(__dirname + "/app/views", {
     express: server,
     autoescape: false,
     noCache: true
 })
+
+// console.log(__dirname + "/app/views")
 
 server.listen(5000, function() {
     console.log("server is running")
