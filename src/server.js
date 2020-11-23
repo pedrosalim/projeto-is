@@ -4,26 +4,26 @@ const nunjucks = require('nunjucks')
 const routes = require('./routes')
 const methodOverride = require('method-override')
 
-const app = express()
+const server = express()
 
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static("public"))
-// app.use('/static', express.static('./public'));
-app.use(methodOverride('_method'))
-// app.set('views', path.join(__dirname, "views"))
+server.use(express.urlencoded({ extended: true }))
+server.use(express.static("public"))
+// server.use('/static', express.static('./public'));
+server.use(methodOverride('_method'))
+// server.set('views', path.join(__dirname, "views"))
 // path.resolve(__dirname,'views')
-app.use(routes)
+server.use(routes)
 
-app.set("view engine", "njk")
+server.set("view engine", "njk")
 
-nunjucks.configure(__dirname + "/app/views", {
-    express: app,
+nunjucks.configure(__dirname + "/server/views", {
+    express: server,
     autoescape: true,
     noCache: true
 })
 
-// console.log(__dirname + "/app/views")
+// console.log(__dirname + "/server/views")
 
-app.listen(5000, function() {
-    console.log("app is running")
+server.listen(5000, function() {
+    console.log("server is running")
 })
