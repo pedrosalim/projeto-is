@@ -8,7 +8,7 @@ const app = express()
 
 app.use(express.urlencoded({ extended: true }))
 // app.use(express.static(path.join(__dirname, "public")))
-app.use('/static', express.static(__dirname + '/public'));
+app.use('/static', express.static('./public'));
 console.log(express.static)
 app.use(methodOverride('_method'))
 // app.set('views', path.join(__dirname, "views"))
