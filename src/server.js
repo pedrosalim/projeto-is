@@ -16,7 +16,7 @@ app.use(routes)
 
 app.set("view engine", "njk")
 
-nunjucks.configure(__dirname + "src/app/views", {
+nunjucks.configure(__dirname + "/app/views", {
     express: app,
     autoescape: true,
     noCache: true
