@@ -1,5 +1,5 @@
 const express = require('express')
-const path = require('path')
+// const path = require('path')
 const nunjucks = require('nunjucks')
 const routes = require('./routes')
 const methodOverride = require('method-override')
@@ -7,9 +7,8 @@ const methodOverride = require('method-override')
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
-// app.use(express.static(path.join(__dirname, "public")))
-app.use('/static', express.static('./public'));
-console.log(express.static)
+app.use(express.static("public"))
+// app.use('/static', express.static('./public'));
 app.use(methodOverride('_method'))
 // app.set('views', path.join(__dirname, "views"))
 // path.resolve(__dirname,'views')
@@ -19,7 +18,7 @@ app.set("view engine", "njk")
 
 nunjucks.configure(__dirname + "/app/views", {
     express: app,
-    autoescape: true,
+    autoescape: false,
     noCache: true
 })
 
