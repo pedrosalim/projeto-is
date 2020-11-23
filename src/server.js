@@ -7,7 +7,13 @@ const methodOverride = require('method-override')
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static("public"))
+// app.use(express.static("public"))
+app.use(express.static(__dirname + "public", {
+    index: false, 
+    immutable: true, 
+    cacheControl: true,
+    maxAge: "30d"
+}));
 // app.use('/static', express.static('./public'));
 app.use(methodOverride('_method'))
 // app.set('views', path.join(__dirname, "views"))
