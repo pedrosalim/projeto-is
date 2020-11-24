@@ -71,11 +71,11 @@
     padding: 1.2rem;
 }
 
-.back a:hover {
+/* .back a:hover {
     background: lightcoral;
     box-shadow: 2px 2px 2px 2px lightslategray;
     transition: 400ms;
-}
+} */
 
 hr {
     opacity: 0;
