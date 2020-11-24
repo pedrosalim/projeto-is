@@ -72,6 +72,12 @@ ALTER TABLE ONLY public.videos ALTER COLUMN id SET DEFAULT nextval('public.video
 -- Data for Name: videos; Type: TABLE DATA; Schema: public; Owner: pedro
 --
 
+COPY public.videos (id, name, theme, videoname, description, university, linkvideo, foto_url, course) FROM stdin;
+7	Teste	Informatica e Sociedade	Inicio de programação 	TRABALHO TRABALHO TRABALHO TRABALHO TRABALHO TRABALHO TRABALHO 	dasda	https://www.youtube.com/watch?v=y6120QOlsfU&ab_channel=Darude	http://img.youtube.com/vi/O_Cc-Xzc0zM/0.jpg	sistemas de informação 
+1	agora vai	Informatica e Sociedade	Inicio de programação 	NODE NODE NODE NODE NODE NODE NODE	s	https://www.youtube.com/watch?v=O_Cc-Xzc0zM&ab_channel=Cod3rCursos	https://p2.trrsf.com/image/fget/cf/600/400/images.terra.com/2019/06/07/turing-07144909012410.jpg	sistemas de informação 
+3	Teste	dasd	Trabalho	TRABALHO TRABALHO TRABALHO TRABALHO TRABALHO TRABALHO TRABALHO 	Youtube	https://www.youtube.com/watch?v=O_Cc-Xzc0zM&ab_channel=Cod3rCursos	http://img.youtube.com/vi/O_Cc-Xzc0zM/0.jpg	sistemas de informação 
+5	Pedro Henrique	INTERFACE HOMEM MAQUINA	DESMONTEI TODA A RTX 3090 GAMING OC GIGABYTE!	E ai galera! Hoje temos uma presença forte aqui, o chip gráfico mais potente em nosso planeta no momento com o projeto da Gigabyte, RTX 3090 Gaming OC 24GB!	UFVJM	https://www.youtube.com/watch?v=y6120QOlsfU&ab_channel=Darude	http://img.youtube.com/vi/O_Cc-Xzc0zM/0.jpg	sistemas de informação 
+\.
 
 
 --
