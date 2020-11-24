@@ -2,7 +2,7 @@
     <div>Link do vídeo</div>
     <div>
         <input 
-            type="text"
+            type="url"
             name="linkvideo"
             placeholder="https://"
             value="{{ video.linkvideo }}"
@@ -14,7 +14,7 @@
     <div>Foto do vídeo</div>
     <div>
         <input 
-            type="text"
+            type="url"
             name="foto_url"
             placeholder="https://"
             value="{{ video.foto_url }}"
@@ -54,6 +54,7 @@
             name="videoname"
             placeholder="Ex: Máquinas de Turing"
             value="{{ video.videoname }}"
+            maxlength="50"
         >
     </div>
 </div>
@@ -70,6 +71,7 @@
     </div>
 </div>
 
+
 <div class="item">
     <div>Faculdade</div>
     <div>
@@ -82,5 +84,19 @@
         >
     </div>
 </div>
+
+<div class="item">
+    <div>Curso</div>
+    <div>
+        <input 
+            type="text"
+            name="course"
+            placeholder="Ex: Sistemas de Informação"
+            value="{{ video.course }}"
+            maxlength="30"
+        >
+    </div>
+</div>
+
 
 <button id="save" type="submit">Salvar</button>

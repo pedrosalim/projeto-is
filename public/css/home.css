@@ -1,12 +1,12 @@
 #page-landing {
     text-align: center;
-    min-height: 70vh;
+    min-height: 33vh;
     
     display: flex;
 }
 
 #container {
-    margin: auto;
+    /* margin: 0 auto; */
 
     width: min(90%, 112rem);
 
@@ -28,10 +28,13 @@
     color: black;
     margin-top: 3%;
     text-align: center;
-
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
     font-weight: bold;
     
-    height: 16vh;
+    
+    /* height: 16vh; */
 }
 
 form input {
@@ -40,15 +43,42 @@ form input {
     box-sizing: border-box;
     border: 1px solid rgb(0, 0, 0);
     width: 90%;
-    border-radius: 30px;
-    outline: 0;
+    border-radius: 10px 0 0 10px;
+    float: left;
+    margin-left: 3%;
 }
 
-button {
-    padding: 1.5rem 2rem;
+form input:focus {
+    background: whitesmoke;
+    outline: none;
+}
+
+.lupa button {
+    /* padding: 1.5rem 2rem; */
     border-radius: 30px;
-    background: rgb(162, 163, 165);
+    width: 0;
+    height: 0;
+    /* background: rgb(162, 163, 165); */
+    margin-top: 2%;
     border: none;
+    top: 0;
+    right: 0;
+    float: left;
+}
+
+img {
+    width: 49px;
+    border: 1px solid black;
+    height: 46px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+}
+
+input button {
+    padding: 10px;
+    
 }
 
 .cards {
@@ -71,4 +101,25 @@ button {
 
 p {
     margin-bottom: 20px;
+}
+
+.delete {
+    background: rgb(252, 97, 97);
+}
+
+.delete:hover {
+    background: rgb(255, 118, 118);
+    transition: 400ms;
+}
+
+hr {
+    height: 2px !important;
+}
+
+label {
+    color: black;
+    display: block;
+    margin-top: 2%;
+    font-size: 2.2rem;
+    font-weight: bold;
 }

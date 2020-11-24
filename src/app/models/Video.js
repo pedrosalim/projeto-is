@@ -21,8 +21,9 @@ module.exports = {
                 videoname,
                 description,
                 university,
-                linkvideo
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7)
+                linkvideo,
+                course
+            ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
             RETURNING id 
         `
 
@@ -33,7 +34,8 @@ module.exports = {
             data.videoname,
             data.description,
             data.university,
-            data.linkvideo
+            data.linkvideo,
+            data.course
         ]
 
         db.query(query, values, function(err, results) {
@@ -71,8 +73,9 @@ module.exports = {
                 videoname=($4),
                 description=($5),
                 university=($6),
-                linkvideo=($7)
-            WHERE id = $8    
+                linkvideo=($7),
+                course=($8)
+            WHERE id = $9  
         `
 
         const values = [
@@ -83,6 +86,7 @@ module.exports = {
             data.description,
             data.university,
             data.linkvideo,
+            data.course,
             data.id
         ]
 
@@ -92,4 +96,11 @@ module.exports = {
             callback()
         })
     },
+    delete(id, callback) {
+        db.query(`DELETE FROM videos WHERE id = $1`, [id], function(err, results) {
+            if(err) throw `Database Error ${err}`
+
+            return callback()
+        })
+    }
 }

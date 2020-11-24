@@ -14,11 +14,11 @@
 
     <div id="page-landing">
 
-                <span class="back" >
-                    <a href="/home" title="Voltar">
-                        <img src="/images/arrow-back.svg" alt="Voltar">
-                    </a>
-                </span>
+        <span class="back" >
+            <a href="/home" title="Voltar">
+                <img src="/images/arrow-back.svg" alt="Voltar">
+            </a>
+        </span>
         
         
         <div id="container">
@@ -27,15 +27,8 @@
             
 
             <header>
-
-
                 <h1>Aula {{ video.videoname }}</h1>
             </header>
-
-            {# <a href="{{ video.linkvideo }}"></a><div 
-                class="item avatar" 
-                style="background: url({{ video.foto_url }}) no-repeat center center / cover">
-            </div> #}
 
             <div class="item">
                 <a href="{{ video.linkvideo }}" target="_blank">
@@ -44,30 +37,31 @@
             </div>
 
             <div class="item">
-                <div class="main">Professor</div>
+                <div class="main">Professor:</div>
                 <div>{{ video.name }}</div>
             </div>
 
-            
-            
-
-            {# <div class="item">
-                <div>Foto</div>
-                <div>{{ video.foto_url }}</div>
-            </div> #}
-
             <div class="item">
-                <div class="main">Matéria</div>
+                <div class="main">Matéria:</div>
                 <div>{{ video.theme }}</div>
             </div>
 
             <div class="item">
-                <div class="main">Universidade</div>
-                <div>{{ video.university }}</div>
+                <div class="main">Curso:</div>
+                <div>{{ video.course }}</div>
             </div>
 
             <div class="item">
-                <div class="main">Descrição</div>
+                <div class="main">Universidade:</div>
+                <div>{{ video.university }}</div>
+                <hr>
+            </div>
+            
+            
+
+                
+            <div class="item description">
+                <div class="main">Descrição:</div>
                 <div>{{ video.description }}</div>
             </div>
 

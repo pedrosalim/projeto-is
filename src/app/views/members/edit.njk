@@ -23,8 +23,24 @@
 
                 </section>
             </form>
+
+            <form id="form-delete" action="/video?_method=DELETE" method="post">
+                <input type="hidden" name="id" value="{{video.id}}">
+                <button class="delete" type="submit">Deletar</button>
+            </form>
             
         </div>
     </div>
+
+    <script>
+        const formDelete = document.querySelector("#form-delete")
+        formDelete.addEventListener("submit", function(event) {
+            const confirmation = confirm("Deseja Deletar?")
+            if(!confirmation) {
+                event.preventDefault()
+            }
+        })
+    </script>    
+
 </body>
 </html>
