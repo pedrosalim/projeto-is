@@ -1,10 +1,10 @@
-#page-landing {
+/* #page-landing {
     text-align: center;
     
-}
+} */
 
-#container {
-    /* margin: 0 auto; */
+/* #container {
+    
 
     width: min(90%, 112rem);
 
@@ -18,7 +18,7 @@
 
  
     animation-name: up 100ms ease;
-}
+} */
 
 .header h1 {
     color: black;
