@@ -80,3 +80,14 @@
 hr {
     opacity: 0;
 }
+
+img {
+    width: 49px;
+    height: 46px;
+    cursor: pointer;
+    outline: none;
+}
+
+img:hover {
+    background: #38ac98ab;
+}

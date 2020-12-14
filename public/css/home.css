@@ -1,8 +1,6 @@
 #page-landing {
     text-align: center;
-    min-height: 33vh;
     
-    display: flex;
 }
 
 #container {
@@ -14,10 +12,8 @@
     width: 80%;
     min-height: 40%;
     border-radius: 30px;
-
- 
+    
     margin: 45px auto;
-
     box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
 
  
@@ -35,6 +31,14 @@
     
     
     /* height: 16vh; */
+}
+
+.label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.4rem !important;
+    color: white !important;
+    margin-top: 5rem;
 }
 
 form input {
@@ -66,14 +70,18 @@ form input:focus {
     float: left;
 }
 
-img {
+.searchButton {
     width: 49px;
-    border: 1px solid black;
     height: 46px;
-    background: white;
     cursor: pointer;
     outline: none;
     border-radius: 0 10px 10px 0;
+    background: white;
+    border: 1px solid #000;
+}
+
+.searchButton:hover {
+    background: rgb(182, 182, 182);
 }
 
 input button {

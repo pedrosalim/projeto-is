@@ -23,3 +23,8 @@ body, input, button, textarea {
 
     font-family: 'Nunito', sans-serif;
 }
+
+body {
+    background: url('../images/background.jpeg');
+    background-size: cover;
+}
